@@ -15,6 +15,7 @@ public class MyTelegramBot extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
         // Получение текста сообщения
         String message = update.getMessage().getText();
+        System.out.println(update.getMessage().getFrom().getUserName() + " : " + message);
 
         // Создание ответа
         SendMessage response = new SendMessage();
